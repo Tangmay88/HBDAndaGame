@@ -45,7 +45,7 @@ const loseSound = new Audio("./music/gameover.mp3");  // เสียงเม�
 const bgMusic = new Audio("./music/soundgame.mp3");  // เพลงพื้นหลัง
 
 // Set initial time limit (60 seconds)
-let timeLeft = 100;
+let timeLeft = 60;
 let timer;
 
 paths.forEach((p, i) => {
@@ -150,5 +150,15 @@ gsap.set("body", { background: "hsl(" + "random(0,360)" + ", 70%, 80%)" });
 gsap.set("#imgSrc", {
   attr: {
     href: kittens[gsap.utils.random(0, kittens.length - 1, 1)] + "?q=50&w=2000"
+  }
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const refreshBtn = document.getElementById("refreshBtn");
+
+  if (refreshBtn) {
+    refreshBtn.addEventListener("click", function () {
+      location.reload(); // รีเฟรชหน้าเว็บ
+    });
   }
 });

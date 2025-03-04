@@ -65,45 +65,74 @@ body {
   }
 }
 
-/* เพิ่มสไตล์ให้กับ .timer */
-.timer {
-  font-family: 'Arial', sans-serif;  /* ใช้ฟอนต์ที่ดูทันสมัย */
-  font-size: 24px;  /* ขนาดฟอนต์ที่ชัดเจน */
-  font-weight: bold;  /* ตัวหนา */
-  text-align: center;  /* จัดกึ่งกลาง */
-  color: #fff;  /* สีข้อความเป็นสีขาว */
-  background: rgba(0, 0, 0, 0.6);  /* พื้นหลังโปร่งใสสีดำ */
-  border-radius: 10px;  /* มุมมน */
-  padding: 10px 20px;  /* ระยะห่างจากขอบ */
+/* กล่องรวม Timer และ ปุ่มรีเฟรช */
+.timer-container {
+  display: flex;  /* จัดเรียงให้อยู่ในแนวเดียวกัน */
+  align-items: center;  /* จัดกึ่งกลางแนวตั้ง */
+  justify-content: center;  /* จัดให้อยู่กลางแนวนอน */
+  gap: 15px;  /* ระยะห่างระหว่าง timer กับปุ่ม */
   position: relative;
-  bottom: -295px;  /* จัดตำแหน่งอยู่ด้านล่าง */
-  left: 13%;
-  transform: translateX(-50%);  /* จัดให้อยู่กลางหน้าจอ */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);  /* เงา */
-  font-size: 28px;  /* ขนาดตัวเลขที่ใหญ่ขึ้น */
-  transition: opacity 0.3s ease-in-out;  /* ทำให้สวยขึ้นเมื่อแสดง/ซ่อน */
+  bottom: -335px;  /* คงตำแหน่งเดิม */
+  left: 28%;
+  transform: translateX(-50%);
 }
 
-/* เอฟเฟ็กต์ที่ทำให้เมื่อชนะหรือแพ้ ตัวจับเวลาจะหายไป */
-.timer.hidden {
-  opacity: 0;
-}
-
-/* เพิ่มเอฟเฟ็กต์การเคลื่อนไหว */
-@keyframes timerEffect {
-  0% { transform: scale(0.9); opacity: 0; }
-  100% { transform: scale(1); opacity: 1; }
-}
-
+/* สไตล์ Timer */
 .timer {
-  animation: timerEffect 1s ease-out;
+  font-family: 'Arial', sans-serif;
+  font-size: 48px;
+  font-weight: bold;
+  text-align: center;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 20px;
+  padding: 20px 40px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
-/* ปรับให้ดูดีขึ้นบนอุปกรณ์มือถือ */
+/* ปุ่มรีเฟรช */
+#refreshBtn {
+  background-color: #3498db;  /* สีฟ้าสดใส */
+  border: none;
+  padding: 12px;
+  border-radius: 50%;  /* ทำให้เป็นวงกลม */
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease-in-out, background 0.3s;
+}
+
+/* เพิ่มเอฟเฟ็กต์เมื่อ hover */
+#refreshBtn:hover {
+  background-color: #2980b9;  /* สีฟ้าเข้มขึ้น */
+  transform: scale(1.1);
+}
+
+/* ไอคอน SVG */
+#refreshBtn svg {
+  width: 48px;
+  height: 48px;
+}
+
+/* รองรับมือถือ */
 @media (max-width: 768px) {
   .timer {
-    font-size: 18px;  /* ลดขนาดฟอนต์ลง */
-    padding: 8px 16px;  /* ลดระยะห่าง */
+    font-size: 28px;
+    padding: 12px 24px;
+  }
+
+  #refreshBtn {
+    padding: 8px;
+  }
+
+  #refreshBtn svg {
+    width: 36px;
+    height: 36px;
   }
 }
+
+
 
