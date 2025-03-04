@@ -45,7 +45,7 @@ const loseSound = new Audio("./music/gameover.mp3");  // เสียงเม�
 const bgMusic = new Audio("./music/soundgame.mp3");  // เพลงพื้นหลัง
 
 // Set initial time limit (60 seconds)
-let timeLeft = 80;
+let timeLeft = 100;
 let timer;
 
 paths.forEach((p, i) => {
