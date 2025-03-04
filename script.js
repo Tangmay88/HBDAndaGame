@@ -152,13 +152,3 @@ gsap.set("#imgSrc", {
     href: kittens[gsap.utils.random(0, kittens.length - 1, 1)] + "?q=50&w=2000"
   }
 });
-
-document.addEventListener("DOMContentLoaded", function () {
-  const refreshBtn = document.getElementById("refreshBtn");
-
-  if (refreshBtn) {
-    refreshBtn.addEventListener("click", function () {
-      location.reload(); // รีเฟรชหน้าเว็บ
-    });
-  }
-});
