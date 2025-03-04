@@ -13,7 +13,7 @@ const kittens = [
   "./images/AndaXBirthDay/andaj7.png",
   "./images/AndaXBirthDay/andaj8.png",
   "./images/AndaXBirthDay/andaj9.png",
-  "./images/AndaXBirthDay/andaj.png"
+  "./images/AndaXBirthDay/andaj10.png"
 ];
 
 const startPos = [
