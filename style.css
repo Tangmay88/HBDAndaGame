@@ -157,4 +157,34 @@ body {
 }
 
 
+.andabg {
+  position: fixed;
+  top: 1465px;
+  left: -46px;
+  width: 48vw;
+  height: 100vh;
+  z-index: 10; /* อยู่ด้านบนสุด */
+  pointer-events: none;
+}
+
+
+.andabg1 {
+  position: fixed;
+  top: 1480px;
+  left: 280px;
+  width: 47vw;
+  height: 100vh;
+  z-index: 10; /* อยู่ด้านบนสุด */
+  pointer-events: none;
+}
+.andabg2 {
+  position: fixed;
+  top: 1486px;
+  left: 580px;
+  width: 48vw;
+  height: 100vh;
+  z-index: 10; /* อยู่ด้านบนสุด */
+  pointer-events: none;
+}
+
 
